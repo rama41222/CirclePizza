@@ -1,16 +1,53 @@
 <div class="row" align="center">
-    <h1>Hello World</h1>
-    <h3>Message: {{message}}</h3>
-    <table class="table">
-        <thead>
+    <div class="col-md-12">
+        <h1 style="color: rgb(240, 165, 25); font-size:75px; font-family: 'Times New Roman', Times, serif; font-weight: bold;">PIZZA HUT</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+
+    </div>
+
+    <div class="col-md-8">
+        <div class="col-md-12 jumbotron" style="background-color:rgb(230, 228, 228);">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-filter"></span> Sort by:</span>
+                <select class="form-control" id="select" style="color:rgb(240, 165, 25);">
+                    <option>POPULARITY</option>
+                    <option>POPULARITY1</option>
+                    <option>POPULARITY2</option>
+                    <option>POPULARITY3</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-12 jumbotron" style="background-color:rgb(230, 228, 228);">
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Pizza Name</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+
+<!-- <h3>Message: {{message}}</h3>
+<table class="table">
+    <thead>
         <th>Name</th>
         <th>Description</th>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         <tr ng-repeat="pizza in pizzas">
             <td>{{pizza.name}}</td>
             <td>{{pizza.description}}</td>
         </tr>
-        </tbody>
-    </table>
-</div>
+    </tbody>
+</table> -->
