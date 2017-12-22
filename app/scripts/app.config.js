@@ -27,7 +27,8 @@ angular.module('CirclePizza').config(function($urlRouterProvider, $stateProvider
     templateUrl: '/views/topup.html',
     controller: 'TopUpCtrl',
       params: {
-          pizza: null
+          pizza: null,
+          locations: null,
       }
   }).state('login',{
     url: '/login',
@@ -39,12 +40,13 @@ angular.module('CirclePizza').config(function($urlRouterProvider, $stateProvider
     controller : 'CardCtrl',
       params: {
           pizza: null,
-          card: null
+          card: null,
+          locations: null,
       }
   }).state('orders',{
     url:'/orders',
-    templateUrl: '/views/travelhistory.html',
-    controller : 'TravelHistoryCtrl'
+    templateUrl: '/views/orderhistory.html',
+    controller : 'OrderHistoryCtrl'
   }).state('checkout', {
     url: '/card/:id/wrapper/:wid',
     templateUrl: '/views/checkout.html',
@@ -57,6 +59,13 @@ angular.module('CirclePizza').config(function($urlRouterProvider, $stateProvider
     url: '/journeys',
     templateUrl: '/views/journey.html',
     controller: 'JourneyCtrl'
+  }).state('location', {
+      url: '/locations',
+      templateUrl: '/views/location.html',
+      controller: 'LocationCtrl',
+      params: {
+          pizza: null,
+      }
   })
 
 
@@ -87,7 +96,6 @@ angular.module('CirclePizza').config(function($urlRouterProvider, $stateProvider
   });
 
   $httpProvider.interceptors.push('authinterceptor')
-
 })
   .constant('API_URL','http://localhost:9090/')
   .constant('MAPS_URL','https://maps.googleapis.com/maps/api/distancematrix/json?')

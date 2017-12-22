@@ -1,0 +1,62 @@
+<h1>Delivery Location</h1>
+<p>Select your delivery location from the map</p>
+
+<hr/>
+
+<div class="row">
+    <div class="col-sm-12">
+        <button ng-click="imgcl()" href=""><img class="img img-responsive"src="http://3.bp.blogspot.com/-DRZ7xScO-cA/Vk3w6pY0csI/AAAAAAAABfU/4QA9ceCHs14/s1600/sri-lanka-colombo-traffic-google-map.jpg"/>
+        </button>
+            <br/>
+        <p><br/></p>
+    </div>
+</div>
+<h4>Or type your delivery location</h4>
+<hr>
+
+<div class="row">
+    <div class="col-sm-12">
+        <form ng-submit="submit()" name="location" class="form-horizontal" novalidate>
+
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="one">Address</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="location.address" class="form-control" id="one" placeholder="Address line 1">
+                    <p class="help-block" ng-show="location.address.$dirty && location.address.$invalid">Invalid Email</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="two">City</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="location.city" class="form-control" id="two" placeholder="City">
+                    <p class="help-block" ng-show="location.city.$dirty && location.city.$invalid">Invalid Email</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="three">District</label>
+                <div class="col-sm-8">
+
+                    <select id="three" ng-model="location.district" ng-options="x for x in districts" class="form-control">
+                    </select>
+                    <p class="help-block" ng-show="location.district.$dirty && location.district.$invalid">Invalid Email</p>
+                </div>
+            </div>
+            <button ng-disabled="location.$invalid" class="btn btn-primary btn-block" type="submit">
+                Next
+            </button>
+            <br/>
+
+        </form>
+    </div>
+
+</div>
+
+<br><br><br><br><br><br>
+
+
+
+
+
+

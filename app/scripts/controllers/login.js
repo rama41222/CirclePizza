@@ -11,14 +11,14 @@ angular.module('CirclePizza').controller('LoginCtrl', function ($scope ,toaster,
   $scope.submit = function () {
     $auth.login({email:$scope.email, password:$scope.password}).then(function (response) {
       toaster.pop('success', 'Welcome!', 'How are you today, '+ response.data.user.email + '?');
-      $state.go('cards')
+      $state.go('main')
     }).catch(handleError)
   }
 
   $scope.authenticate = function (provider) {
     $auth.authenticate(provider).then(function (res) {
       toaster.pop('success', 'Welcome!', 'How are you today '+ res.data.user.displayName +'?');
-      $state.go('cards')
+      $state.go('main')
     }).catch(handleError)
 
   }

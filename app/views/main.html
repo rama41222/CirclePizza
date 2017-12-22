@@ -6,7 +6,7 @@
 <div class="article_box" style="padding-top:20px;" ng-repeat="pizza in pizzas">
   <div class="row">
     <div align="left" class="col-sm-6" >
-      <h3><i class="fa fa-pie-chart" ></i>&nbsp;&nbsp;{{pizza.name}}</h3>
+      <h3><i class="fa fa-pie-chart" ></i>&nbsp;&nbsp;{{pizza.name}} &nbsp;<i ng-if="pizza.type==='0'"class="veg fa fa-leaf"></i><i ng-if="pizza.type==='1'" class="meat fa fa-cutlery"></i></h3>
       <br/>
     </div>
   </div>
@@ -35,3 +35,5 @@
     </div>
   </div>
 </div>
+
+<br><br><br><br><br><br>

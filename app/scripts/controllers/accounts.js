@@ -16,6 +16,6 @@ angular.module('CirclePizza')
     })
 
     $scope.navigate = function () {
-     $state.go('cards')
+     $state.go('main')
     }
   });

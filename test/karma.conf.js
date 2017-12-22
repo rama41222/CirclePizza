@@ -27,6 +27,8 @@ module.exports = function(config) {
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/AngularJS-Toaster/toaster.js',
       'bower_components/satellizer/dist/satellizer.js',
+      'bower_components/angular-ui-utils/ui-utils.js',
+      'bower_components/angular-ui-map/ui-map.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

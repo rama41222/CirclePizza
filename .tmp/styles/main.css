@@ -268,3 +268,14 @@ footer {
   color: #020001;
   cursor: pointer!important;
 }
+
+.meat{
+  color: #ff4668 !important;
+  font-size: 0.7em;
+}
+
+.veg{
+  color: #18bd95 !important;
+  font-size: 0.7em;
+
+}
