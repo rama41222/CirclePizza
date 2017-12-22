@@ -8,7 +8,7 @@
 
   </div>
 
-  <h3> Topup here</h3>
+  <h3>Checkout here</h3>
 
   <form ng-submit="submit()" name="register" class="form-horizontal" novalidate>
     <div class="col-sm-6">
@@ -19,7 +19,8 @@
       <br/><br/>
       <div class="form-group">
         <div class="col-sm-12">
-          <input type="number" min="0.00" ng-model="totalPrice" class="form-control" id="email" placeholder="Total Price">
+          <label for="x">RS</label>
+          <input id="x" type="number" min="0.00" ng-model="totalPrice" class="form-control" placeholder="Total Price">
           <p class="help-block" ng-show="totalPrice.$dirty && totalPrice.$invalid">Invalid Amount</p>
         </div>
       </div>

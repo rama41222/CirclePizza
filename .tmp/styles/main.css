@@ -183,7 +183,10 @@ body {
   background-color: #ebf0e9;
   transition: 0.1s;
 }
-
+.input-size {
+  margin: 5px !important;
+  color: rgb(255, 161, 156) !important;
+}
 footer {
   background-color: #ffe9e6;
 }

@@ -25,15 +25,22 @@ angular.module('CirclePizza').config(function($urlRouterProvider, $stateProvider
   }).state('cards', {
     url: '/cards',
     templateUrl: '/views/topup.html',
-    controller: 'TopUpCtrl'
+    controller: 'TopUpCtrl',
+      params: {
+          pizza: null
+      }
   }).state('login',{
     url: '/login',
     templateUrl:'/views/login.html',
     controller:'LoginCtrl'
   }).state('card',{
-    url:'/card/:id',
+    url:'/card',
     templateUrl: '/views/card.html',
-    controller : 'CardCtrl'
+    controller : 'CardCtrl',
+      params: {
+          pizza: null,
+          card: null
+      }
   }).state('orders',{
     url:'/orders',
     templateUrl: '/views/travelhistory.html',

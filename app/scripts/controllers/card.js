@@ -8,8 +8,8 @@
  * Controller of the justforfunApp
  */
 angular.module('CirclePizza').controller('CardCtrl', function ($scope, $http,toaster,$stateParams,API_URL, $state) {
-  $scope.totalPrice = 0
-  $http.get(API_URL+'ccs/'+ $stateParams.id).then(function (card) {
+  $scope.totalPrice = $stateParams.pizza.qty * $stateParams.pizza.price
+  $http.get(API_URL+'ccs/'+ $stateParams.card.id).then(function (card) {
    // console.log(card)
     $scope.card = card.data[0]
   }).catch(function (e) {
