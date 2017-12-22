@@ -1,75 +1,29 @@
-<div class="jumbotron">
-  <h1>TravelMate</h1>
-  <p class="lead">
-    Your modern travel payments service!
-  </p>
+<div class="row">
+  <h3>Pizza Offers</h3>
+    <br/>
 </div>
 
-<div class="article_box" style="padding-top:20px;">
+<div class="article_box" style="padding-top:20px;" ng-repeat="pizza in pizzas">
   <div class="row">
     <div align="left" class="col-sm-6" >
-      <h3><i class="fa fa-flag" ></i>&nbsp;&nbsp;Instant Topups</h3>
+      <h3><i class="fa fa-pie-chart" ></i>&nbsp;&nbsp;{{pizza.name}}</h3>
     </div>
   </div>
   <div class="row">
-    <div align="left" class="col-sm-12" >
-      <p style="text-align:justify" class="">
-        Top up your travelmate card from the web interface instantly
-      </p>
-      <br/>
+    <div class="col-sm-4">
+      <div class="box-wrapper">
+        <span><img class="img img_circ img-responsive" ng-src="{{pizza.image}}""/></span>
+      </div>
     </div>
-  </div>
+    <div class="col-sm-8">
+      <div align="left" class="col-sm-12" >
+        <p style="text-align:justify" class="">
+          {{pizza.description}}
+        </p>
+        <br/>
+        <a class="button_circ" ng-click="navigate()">Try now!</a>
 
-  <div class="row">
-    <div align="center" class="col-sm-12" >
-      <a class="button_circ" ng-click="navigate()">Try now!</a>
+      </div>
     </div>
   </div>
 </div>
-
-<div class="article_box" style="padding-top:20px;">
-  <div class="row">
-    <div align="left" class="col-sm-6" >
-      <h3><i class="fa fa-gratipay" ></i>&nbsp;&nbsp;Swipe and Pay</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div align="left" class="col-sm-12" >
-      <p style="text-align:justify" class="">
-        No more travelling without tickets. No more waiting until the conductor comes to you. You'll get the ticket when you get into the b
-      </p>
-      <br/>
-    </div>
-  </div>
-
-  <div class="row">
-    <div align="center" class="col-sm-12" >
-      <a class="button_circ" ng-click="navigate()">Try now!</a>
-    </div>
-  </div>
-
-
-</div>
-
-<div class="article_box" style="padding-top:20px;">
-  <div class="row">
-    <div align="left" class="col-sm-6" >
-      <h3><i class="fa fa-birthday-cake" ></i> NextGen</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div align="left" class="col-sm-12" >
-      <p style="text-align:left" class="">
-        Embrace the future of travel. Get your travelmate id using your National ID card.
-      </p>
-      <br/>
-    </div>
-  </div>
-  <div class="row">
-    <div align="center" class="col-sm-12" >
-      <a class="button_circ" ng-click="navigate()">Try now!</a>
-    </div>
-  </div>
-</div>
-
-<br/><br/><br/><br/><br/><br/><br/>
