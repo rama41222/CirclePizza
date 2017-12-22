@@ -1,0 +1,89 @@
+<h2>Checkout</h2>
+<hr/>
+<div class="row">
+  <div class="col-sm-6">
+    <h5 align="center">Card</h5>
+    <a class="no-styles" ><div align="center" class="box-wrapper-checkout">
+      <h4 class="lead">{{card.name}}</h4>
+      <span><img class="img img_circ img-responsive" ng-src="{{card.image}}""/></span>
+      <br/>
+      <hr/>
+      <p>RS {{card.price}} /=</p>
+      <br/>
+    </div>
+    </a>
+  </div>
+  <div class="col-sm-6">
+    <h5 align="center">Wrapper</h5>
+    <a class="no-styles" ><div align="center" class="box-wrapper-checkout">
+      <h4 class="lead">{{card.name}}</h4>
+      <span><img class="img img_circ img-responsive" ng-src="{{card.image}}""/></span>
+      <br/>
+      <hr/>
+      <p>RS {{card.price}} /=</p>
+      <br/>
+    </div>
+    </a>
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col-sm-12">
+  <form ng-submit="submit()" name="register" class="form-horizontal" novalidate>
+  <div class="col-sm-6">
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="email">How many ? </label>
+        <div class="col-sm-8">
+          <input type="text" ng-model="qty" class="form-control" id="email" placeholder="Enter the Quantity">
+          <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Invalid Email</p>
+        </div>
+      </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="email">To whom ? </label>
+      <div class="col-sm-8">
+        <input type="text" ng-model="qty" class="form-control" id="email" placeholder="Enter the Quantity">
+        <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Invalid Email</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="email">when ? </label>
+      <div class="col-sm-8">
+        <input type="date" ng-model="qty" class="form-control" id="email" placeholder="Enter the Quantity">
+        <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Invalid Email</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-sm-6">
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <textarea rows="4" type="text" ng-model="qty" class="form-control" id="email" placeholder="Write a message"></textarea>
+          <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Invalid Email</p>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="date" ng-model="qty" class="form-control" id="email" placeholder="Total Price">
+          <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Invalid Email</p>
+        </div>
+      </div>
+
+      <button ng-disabled="register.$invalid" class="btn btn-primary btn-block" type="submit">
+        Purchase
+      </button>
+      <br/>
+    </div>
+  </form>
+  </div>
+</div>
+
+
+
+

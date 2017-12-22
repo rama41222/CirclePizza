@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="col-sm-6" >
+    <div align="center" class="box-wrapper-extended">
+
+      <h4 class="lead">{{card.name}}</h4>
+      <img class="img img_circ img-responsive" ng-src="{{card.image}}""/>
+    </div>
+
+  </div>
+
+  <h3> Topup here</h3>
+
+  <form ng-submit="submit()" name="register" class="form-horizontal" novalidate>
+    <div class="col-sm-6">
+
+    </div>
+
+    <div class="col-sm-6">
+      <br/><br/>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="number" min="0.00" ng-model="totalPrice" class="form-control" id="email" placeholder="Total Price">
+          <p class="help-block" ng-show="totalPrice.$dirty && totalPrice.$invalid">Invalid Amount</p>
+        </div>
+      </div>
+      <br/>
+
+      <button ng-disabled="register.$invalid" class="btn btn-primary btn-block" type="submit">
+        Purchase
+      </button>
+      <br/>
+    </div>
+  </form>
