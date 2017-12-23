@@ -30,8 +30,9 @@ angular.module('CirclePizza').controller('CardCtrl', function ($scope, $http,toa
     } else {
       $http.post(API_URL+'balance', { balance:$scope.totalPrice }).then(function (response) {
         console.log(response)
-        toaster.pop('success', 'Success', "Congratulations!!! you have earned "+$scope.totalPrice+". You can redeem these points by visiting any CirclePizza outlet")
-        $state.go('account')
+          toaster.pop('success', 'Order Placed', "Your order worth "+$scope.totalPrice+". is on its way!!. You'll get a call soon")
+          toaster.pop('success', 'Success', "Congratulations!!! you have earned "+$scope.totalPrice+". You can redeem these points by visiting any CirclePizza outlet")
+        $state.go('orders')
       }).catch(function (e) {
         toaster.pop('error', 'Error', e.message);
       })

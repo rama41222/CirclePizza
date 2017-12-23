@@ -66,6 +66,13 @@ angular.module('CirclePizza').config(function($urlRouterProvider, $stateProvider
       params: {
           pizza: null,
       }
+  }).state('pizza', {
+      url: '/pizza',
+      templateUrl: '/views/pizza.html',
+      controller: 'PizzaCtrl',
+      params: {
+          pizza: null,
+      }
   })
 
 
