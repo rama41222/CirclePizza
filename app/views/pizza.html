@@ -11,19 +11,20 @@
             <hr/>
                 <div class="row">
                     <div class="col-sm-6">
-                        <select id="three" ng-model="selectedOption" ng-options="x for x in sizes" class="form-control">
+                        <select  ng-model="selectedOption" ng-options="z for (x,z) in sizes" class="form-control" >
                         </select>
                     </div>
                     <div class="col-sm-6">
-                        <button class="sizelabel" ng-click="">{{selectedOption}}</button>
+                        <select  ng-model="selectedQty" ng-options="y for y in quantities" class="form-control">
+                        </select>
                     </div>
                 </div>
             <p><br/></p>
-                    <p class="price">{{pizza.price}} /=</p>
+                    <p class="price">{{pizza.price* selectedQty*sizeChange(selectedOption)}} /=</p>
             <br/>
                     <i class="fa fa-leaf"></i>
             <p><br/></p>
-            <button class="button_circ" ng-click="navigate(pizza)">Try now!</button>
+            <button class="button_circ" ng-click="addToCart(selectedQty,selectedOption,pizza)">Add to cart!</button>
 
 
         </div>
@@ -32,4 +33,35 @@
 
 
 <br><br><br><br><br><br>
+
+<div align="center" class="carte" ng-cloak="">
+    <div class="row">
+        <p><kbd>Cart</kbd></p>
+        <hr/>
+    </div>
+    <div class="row">
+        <table class="table table-stripped">
+            <thead>
+                <th>Actions</th>
+                <th>Item</th>
+                <th>Size</th>
+                <th>Qty</th>
+                <th>Price</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(index,item) in cart">
+                    <td><button class="button_circ" ng-click="removeItem(index)"><i class="fa fa-close"></i></button></td>
+                    <td>{{item.pizza.name}}</td>
+                    <td>{{item.pizza.size}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.quantity * item.size * item.pizza.price | number: 2}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr/>
+        <p>Total = {{grandTotal | number:2}} /=</p>
+        <button class="button_circ" ng-click="checkout()">checkout</button>
+
+    </div>
+</div>
 
