@@ -18,7 +18,8 @@
         <ul class="nav navbar-nav">
           <li ui-sref-active="active"><a ui-sref="main">Home</a></li>
           <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="pizza">Pizza World</a></li>
-          <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="account">Pizza Points</a></li>
+          <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="account">Rewards</a></li>
+          <li ng-show="isAuthenticated()" ui-sref-active="active"><a target="_blank" href="http://localhost:3000">My Pizza</a></li>
           <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="orders">Pizza History</a></li>
           <li ng-hide="isAuthenticated()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
           <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="logout">Logout</a></li>

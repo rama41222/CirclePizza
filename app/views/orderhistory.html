@@ -4,18 +4,18 @@
   <tr>
     <th>Order Id</th>
     <th>Card ID</th>
-    <th>From</th>
-    <th>To</th>
+    <th>City</th>
+    <th>Items</th>
     <th>TimeStamp</th>
     <th>Total price</th>
   </tr>
   <tr ng-repeat="order in orders">
     <td>{{order.id}}</td>
     <td>{{order.cardid}}</td>
-    <td>{{order.from}}</td>
-    <td>{{order.to}}</td>
+    <td>{{order.city}}</td>
+    <td>{{order.type}}</td>
     <td>{{order.time}}</td>
-    <td>{{order.totalprice}}</td>
+    <td>{{order.totalprice}} /=</td>
   </tr>
 </table>
 <br/>

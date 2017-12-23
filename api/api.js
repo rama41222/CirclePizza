@@ -432,11 +432,11 @@ var orders= [
 
 
 var travelHistory = [
-  {id: '1',cardid:'11111', from: 'Kandy', to:'Colombo', time:'Tue Nov 03 2017 1:52:45', totalprice: 320},
-  {id: '2',cardid:'22222', from: 'Colombo', to:'Nuwaraeliya', time:'Fri Otc 03 2017 13:12:45', totalprice: 400},
-  {id: '3',cardid:'33333', from: 'Galle', to:'Matara', time:'Sun Jan 03 2017 15:22:45', totalprice: 60},
-  {id: '4',cardid:'44444', from: 'Kadawatha', to:'Colombo', time:'Mon Feb 03 2017 1:5:45', totalprice: 80},
-  {id: '5',cardid:'55555', from: 'Kadawatha', to:'Matara', time:'Wed Aug 03 2017 13:12:45', totalprice: 600},
-  {id: '6',cardid:'66666', from: 'Kadawatha', to:'Negambo', time:'Wed Dec 03 2017 17:52:45', totalprice: 150},
+  {id: '1',cardid:'111***', city: 'Kandy', type:'Pizza Bundle', time:'Tue Nov 03 2017 1:52:45', totalprice: 2320},
+  {id: '2',cardid:'222***', city: 'Colombo', type:'Pizza Bundle', time:'Fri Otc 03 2017 13:12:45', totalprice:5400},
+  {id: '3',cardid:'333***', city: 'Galle', type:'Pizza Bundle', time:'Sun Jan 03 2017 15:22:45', totalprice:2360},
+  {id: '4',cardid:'444***', city: 'Kadawatha', type:'Custom Pizza', time:'Mon Feb 03 2017 1:5:45', totalprice: 6780},
+  {id: '5',cardid:'555***', city: 'Kadawatha', type:'Devilled Chiken Qty: 28', time:'Wed Aug 03 2017 13:12:45', totalprice: 34600},
+  {id: '6',cardid:'666***', city: 'Kadawatha', type:'Pizza Bundle', time:'Wed Dec 03 2017 17:52:45', totalprice: 1350},
 
 ]

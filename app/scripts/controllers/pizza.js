@@ -62,7 +62,17 @@ angular.module('CirclePizza')
       }
       
       $scope.checkout = function () {
+            var pizz = {
+                price: $scope.grandTotal,
+                qty:1,
+                name:'Pizza Bundle',
+            }
 
+          if($auth.isAuthenticated()){
+              $state.go('location', {pizza: pizz})
+          }else {
+              $state.go('login')
+          }
       }
 
       $scope.removeItem = function (index) {
