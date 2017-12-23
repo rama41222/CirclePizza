@@ -11,6 +11,7 @@ angular.module('CirclePizza')
   .controller('PizzaCtrl', function ($scope, $state, $auth, $stateParams) {
       $scope.cart = []
       $scope.grandTotal = 0
+      $scope.searchTerm = ""
       $scope.pizzas = [
           {qty:1 ,size:'S',description:'Chicken bacon, onions & green chillies with a double layer of mozzarella cheese.',id:'1', name:'Chicken Bacon', image:'https://www.pizzahut.lk/Images/Product/Chicken%20Bacon.png', price:480.00 , type:'1'},
           {qty:1 ,size:'S',description:'Rich tomato sauce with a triple layer of mozzarella cheese.',id:'2', name:'Cheese Lovers', image:'https://www.pizzahut.lk/Images/Product/Cheese%20Lovers.png', price:500.00 , type:'0'},
