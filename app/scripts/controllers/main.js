@@ -9,8 +9,8 @@
  */
 angular.module('CirclePizza')
   .controller('MainCtrl', function ($scope, $state, $auth) {
+      $scope.isAuthenticated = $auth.isAuthenticated;
     $scope.navigate = function (pizza) {
-
       if($auth.isAuthenticated()){
         $state.go('location', {pizza: pizza})
       }else {

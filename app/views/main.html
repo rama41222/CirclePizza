@@ -22,13 +22,13 @@
           {{pizza.description}}
         </p>
         <br/>
-        <a class="button_circ input-size">
+        <a ng-show="isAuthenticated()" class="button_circ input-size">
           <label>Qty&nbsp;<input type="number" min="1" max="10" required ng-model="pizza.qty"/></label>
         </a>
         <a class="button_circ input-size">
           {{pizza.size}}
         </a>
-        <a class="button_circ" ng-click="">{{pizza.price*pizza.qty}} /=</a>
+        <a ng-show="isAuthenticated()" class="button_circ" ng-click="">{{pizza.price*pizza.qty}} /=</a>
         <a class="button_circ" ng-click="navigate(pizza)">Try now!</a>
 
       </div>

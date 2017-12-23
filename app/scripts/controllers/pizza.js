@@ -40,6 +40,18 @@ angular.module('CirclePizza')
           }
       }
 
+      $scope.reverseChange = function (size) {
+          switch (size){
+              case 1:
+                  return 'S'
+              case 2:
+                  return 'M'
+              case 3:
+                  return 'L'
+          }
+      }
+
+
       $scope.addToCart= function(quantity,size,pizza){
           console.log(pizza)
           var mycart = {

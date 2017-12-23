@@ -58,7 +58,7 @@
                 <tr ng-repeat="(index,item) in cart">
                     <td><button class="button_circ" ng-click="removeItem(index)"><i class="fa fa-close"></i></button></td>
                     <td>{{item.pizza.name}}</td>
-                    <td>{{item.pizza.size}}</td>
+                    <td>{{reverseChange(item.size)}}</td>
                     <td>{{item.quantity}}</td>
                     <td>{{item.quantity * item.size * item.pizza.price | number: 2}}</td>
                 </tr>
