@@ -28,7 +28,7 @@
             <p><br/></p>
                     <p class="price">{{pizza.price* selectedQty*sizeChange(selectedOption)}} /=</p>
             <br/>
-                    <i class="fa fa-leaf"></i>
+            <i ng-if="pizza.type==='0'"class="veg-plus fa fa-leaf"></i><i ng-if="pizza.type==='1'" class="meat-plus fa fa-cutlery"></i>
             <p><br/></p>
             <button class="button_circ" ng-click="addToCart(selectedQty,selectedOption,pizza)">Add to cart!</button>
 

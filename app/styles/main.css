@@ -281,6 +281,16 @@ footer {
   font-size: 0.7em;
 
 }
+.meat-plus{
+  color: #ff4668 !important;
+  font-size: 1.2em;
+}
+
+.veg-plus{
+  color: #18bd95 !important;
+  font-size: 1.2em;
+
+}
 
 .sizelabel {
   color: #120507 !important;
