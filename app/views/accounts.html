@@ -1,0 +1,29 @@
+<h1>Pizza points</h1>
+
+<hr/>
+<table class="table table-striped table-hover">
+  <tr>
+    <th>Account ID</th>
+    <th>Available Points</th>
+    <th>Top Up</th>
+
+  </tr>
+  <tr>
+    <td>{{accounts._id}}</td>
+    <td>{{accounts.balance}} &nbsp;[{{accounts.balance * 0.04 |  number: 2}} /=]</td>
+    <td>
+      <div class="row">
+        <div align="left" class="col-sm-12" >
+          <a class="button_circ" ng-click="navigate()">Order more!</a>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<br/>
+<div class="text-success">
+  <p>1 Pizza point = LKR 0.04</p>
+</div>
+
+

@@ -1,0 +1,73 @@
+<div class="row">
+    <h1>Pizza World</h1>
+    <hr/>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <input type='text' class="form-control" ng-model="searchTerm" placeholder="Search">
+    </div>
+</div>
+<br/>
+
+<a  ng-click="navigate()" class="no-styles" ng-repeat="pizza in pizzas |  filter : searchTerm" >
+    <div align="center" class="box-wrapper">
+        <h4 class="">{{pizza.name}}</h4>
+        <span><img class="img img_circ img-responsive" ng-src="{{pizza.image}}"/></span>
+        <div class="row">
+            <hr/>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <select  ng-model="selectedOption" ng-options="z for (x,z) in sizes" class="form-control" >
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                        <select  ng-model="selectedQty" ng-options="y for y in quantities" class="form-control">
+                        </select>
+                    </div>
+                </div>
+            <p><br/></p>
+                    <p class="price">{{pizza.price* selectedQty*sizeChange(selectedOption)}} /=</p>
+            <br/>
+            <i ng-if="pizza.type==='0'"class="veg-plus fa fa-leaf"></i><i ng-if="pizza.type==='1'" class="meat-plus fa fa-cutlery"></i>
+            <p><br/></p>
+            <button class="button_circ" ng-click="addToCart(selectedQty,selectedOption,pizza)">Add to cart!</button>
+
+
+        </div>
+    </div>
+</a>
+
+
+<br><br><br><br><br><br>
+
+<div align="center" class="carte" ng-cloak="">
+    <div class="row">
+        <p><kbd>Cart</kbd></p>
+        <hr/>
+    </div>
+    <div class="row">
+        <table class="table table-stripped">
+            <thead>
+                <th>Actions</th>
+                <th>Item</th>
+                <th>Size</th>
+                <th>Qty</th>
+                <th>Price</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(index,item) in cart">
+                    <td><button class="button_circ" ng-click="removeItem(index)"><i class="fa fa-close"></i></button></td>
+                    <td>{{item.pizza.name}}</td>
+                    <td>{{item.pizza.size}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.quantity * item.size * item.pizza.price | number: 2}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr/>
+        <p>Total = {{grandTotal | number:2}} /=</p>
+        <button class="button_circ" ng-click="checkout()">checkout</button>
+
+    </div>
+</div>
+

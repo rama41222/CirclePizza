@@ -1,0 +1,68 @@
+<h1>Journey</h1>
+<hr/>
+
+<form ng-submit="getDirections()" name="location" class="form-horizontal" novalidate>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="start">From </label>
+      <div class="col-sm-10">
+        <input type="text" ng-model="start" class="form-control" id="start" placeholder="Enter the Start Location">
+        <p class="help-block" ng-show="location.start.$dirty && register.email.$invalid">Invalid Start Location</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="destination">To</label>
+      <div class="col-sm-11">
+        <input type="text" ng-model="destination" class="form-control" id="destination" placeholder="Enter the Destination">
+        <p class="help-block" ng-show="location.destination.$dirty && register.email.$invalid">Invalid Destination</p>
+      </div>
+    </div>
+
+    <div align="right">
+      <button ng-disabled="location.$invalid" class="btn btn-primary btn-block" type="submit">
+        Calculate Bus Ticket Charge
+      </button>
+    </div>
+    <br/>
+  </div>
+</form>
+
+<br/>
+<table class="table table-striped table-hover" ng-show="hasData">
+  <tr>
+    <th></th>
+    <th>Information</th>
+
+  </tr>
+  <tr>
+  <tr>
+    <th>Journey Start</th>
+    <td>{{originatingString}}</td>
+  </tr>
+   <tr>
+    <th>Destination</th>
+    <td>{{destinationString}}</td>
+  </tr>
+
+  <tr>
+  <th>Total Distance</th>
+  <td>{{totalDistance}}</td>
+  </tr>
+  <tr>
+  <th>Total Duration</th>
+  <td>{{duration}}</td>
+  </tr>
+  <tr>
+  <th>Total Charges</th>
+  <td>{{fee}} <span ng-show="fee">/=</span> </td>
+  </tr>
+</table>
+
+<br/>
+<br/>
+<br/>
+
+

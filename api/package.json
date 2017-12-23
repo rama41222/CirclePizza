@@ -1,0 +1,31 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "test": "mocha --timeout 10000",
+    "start": "node-dev ./api.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "express": "^4.16.2",
+    "google-distance": "^1.0.1",
+    "jwt-simple": "^0.5.1",
+    "mocha": "^4.0.1",
+    "moment": "^2.19.1",
+    "mongoose": "^4.13.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "querystring": "^0.2.0",
+    "request": "^2.83.0"
+  }
+}

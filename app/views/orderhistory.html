@@ -1,0 +1,44 @@
+<h2>Order History</h2>
+<hr/>
+<table class="table table-striped table-hover">
+  <tr>
+    <th>Order Id</th>
+    <th>Card ID</th>
+    <th>City</th>
+    <th>Items</th>
+    <th>TimeStamp</th>
+    <th>Total price</th>
+  </tr>
+  <tr ng-repeat="order in orders">
+    <td>{{order.id}}</td>
+    <td>{{order.cardid}}</td>
+    <td>{{order.city}}</td>
+    <td>{{order.type}}</td>
+    <td>{{order.time}}</td>
+    <td>{{order.totalprice}} /=</td>
+  </tr>
+</table>
+<br/>
+
+<h2>Stats</h2>
+
+<h4>Expenditure report</h4>
+<br/>
+
+<canvas id="bar" class="chart chart-bar"
+        chart-data="data" chart-labels="labels"> chart-series="series"
+</canvas>
+<br/>
+
+<h4>Expenditures Pie</h4>
+<br/>
+
+<canvas id="pie" class="chart chart-pie"
+        chart-data="data" chart-labels="labels"> chart-series="series"
+</canvas>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

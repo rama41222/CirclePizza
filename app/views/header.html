@@ -1,0 +1,31 @@
+<div ng-controller="HeaderCtrl" class="header">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" ui-sref="main">Circle Pizza</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active"><a ui-sref="main">Home</a></li>
+          <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="pizza">Pizza World</a></li>
+          <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="account">Rewards</a></li>
+          <li ng-show="isAuthenticated()" ui-sref-active="active"><a target="_blank" href="http://localhost:3000">My Pizza</a></li>
+          <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="orders">Pizza History</a></li>
+          <li ng-hide="isAuthenticated()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
+          <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="logout">Logout</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
