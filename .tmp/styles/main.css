@@ -279,3 +279,15 @@ footer {
   font-size: 0.7em;
 
 }
+
+.sizelabel {
+  color: #120507 !important;
+  padding: 10px !important;
+  border-radius: 5px;
+  border-style: dashed;
+}
+
+.price {
+  color: #18bd95 !important;
+  font-size: 1.3em;
+}

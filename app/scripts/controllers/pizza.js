@@ -20,5 +20,7 @@ angular.module('CirclePizza')
           {qty:1 ,size:'M',description:'Tandoori chicken & onions with a double layer of mozzarella cheese. ',id:'8', name:'Tandoori Chicken', image:'https://www.pizzahut.lk/Images/Product/Tandoori%20Chicken.png', price: 345.00 , type:'1'}
 
       ]
+      $scope.sizes = ['S','M','L']
+      $scope.selectedOption = $scope.sizes[1];
 
   });

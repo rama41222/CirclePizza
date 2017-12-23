@@ -1,13 +1,35 @@
 <div class="row">
     <h1>Pizza World</h1>
-    <br/>
+    <hr/>
 </div>
 
-<a  ng-click="navigate()" class="no-styles" ng-repeat="pizza in pizzas" ><div align="center" class="box-wrapper">
-    <h4 class="">{{pizza.name}}</h4>
-    <span><img class="img img_circ img-responsive" ng-src="{{pizza.image}}""/></span>
-</div>
+<a  ng-click="navigate()" class="no-styles" ng-repeat="pizza in pizzas" >
+    <div align="center" class="box-wrapper">
+        <h4 class="">{{pizza.name}}</h4>
+        <span><img class="img img_circ img-responsive" ng-src="{{pizza.image}}"/></span>
+        <div class="row">
+            <hr/>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <select id="three" ng-model="selectedOption" ng-options="x for x in sizes" class="form-control">
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="sizelabel" ng-click="">{{selectedOption}}</button>
+                    </div>
+                </div>
+            <p><br/></p>
+                    <p class="price">{{pizza.price}} /=</p>
+            <br/>
+                    <i class="fa fa-leaf"></i>
+            <p><br/></p>
+            <button class="button_circ" ng-click="navigate(pizza)">Try now!</button>
+
+
+        </div>
+    </div>
 </a>
 
 
 <br><br><br><br><br><br>
+
